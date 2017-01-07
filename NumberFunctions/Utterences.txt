@@ -6,6 +6,7 @@ SubtractIntent subtract {firstnum} and {secondnum}
 
 MultiplyIntent what is {firstnum} mutiplied by {secondnum}
 MultiplyIntent multiply {firstnum} and {secondnum}
+MultiplyIntent what is {firstnum} times {secondnum}
 
 DivideIntent what is {firstnum} divided by {secondnum}
 DivideIntent divide {firstnum} and {secondnum}
