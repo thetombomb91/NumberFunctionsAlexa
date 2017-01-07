@@ -1,7 +1,11 @@
 AddIntent what is {firstnum} plus {secondnum}
 AddIntent add {firstnum} and {secondnum}
-AddIntent tell me the answer to {firstnum} and {secondnum}
 
-SubtractIntent what is {firstnum} minus{secondnum}
+SubtractIntent what is {firstnum} minus {secondnum}
 SubtractIntent subtract {firstnum} and {secondnum}
-SubtractIntent tell me the answer to {firstnum} and {secondnum}
+
+MultiplyIntent what is {firstnum} mutiplied by {secondnum}
+MultiplyIntent multiply {firstnum} and {secondnum}
+
+DivideIntent what is {firstnum} divided by {secondnum}
+DivideIntent divide {firstnum} and {secondnum}

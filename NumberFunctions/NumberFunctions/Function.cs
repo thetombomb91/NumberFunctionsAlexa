@@ -41,6 +41,20 @@ namespace NumberFunctions
                     innerResponse = new PlainTextOutputSpeech();
                     ((PlainTextOutputSpeech) innerResponse).Text = $"The result is {result}.";
                 }
+                else if (input.Request.Intent.Name == "MultiplyIntent")
+                {
+                    double result = firstNumber * secondNumber;
+
+                    innerResponse = new PlainTextOutputSpeech();
+                    ((PlainTextOutputSpeech)innerResponse).Text = $"The result is {result}.";
+                }
+                else if (input.Request.Intent.Name == "DivideIntent")
+                {
+                    double result = firstNumber / secondNumber;
+
+                    innerResponse = new PlainTextOutputSpeech();
+                    ((PlainTextOutputSpeech)innerResponse).Text = $"The result is {result}.";
+                }
             }
 
             var response = new Response
