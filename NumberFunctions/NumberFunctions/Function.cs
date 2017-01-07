@@ -25,19 +25,22 @@ namespace NumberFunctions
             }
             else if (input.GetRequestType() == typeof(Slight.Alexa.Framework.Models.Requests.RequestTypes.IIntentRequest))
             {
-                // intent request, process the intent
-                log.LogLine($"Intent Requested {input.Request.Intent.Name}");
+                var firstNumber = Convert.ToDouble(input.Request.Intent.Slots["firstnum"].Value);
+                var secondNumber = Convert.ToDouble(input.Request.Intent.Slots["secondnum"].Value);
+                if (input.Request.Intent.Name == "AddIntent")
+                {
+                    double result = firstNumber + secondNumber;
 
-                // AddNumbersIntent
-                // get the slots
-                var n1 = Convert.ToDouble(input.Request.Intent.Slots["firstnum"].Value);
-                var n2 = Convert.ToDouble(input.Request.Intent.Slots["secondnum"].Value);
+                    innerResponse = new PlainTextOutputSpeech();
+                    ((PlainTextOutputSpeech) innerResponse).Text = $"The result is {result}.";
+                }
+                else if (input.Request.Intent.Name == "SubtractIntent")
+                {
+                    double result = firstNumber - secondNumber;
 
-                double result = n1 + n2;
-
-                innerResponse = new PlainTextOutputSpeech();
-                ((PlainTextOutputSpeech) innerResponse).Text = $"The result is {result}.";
-
+                    innerResponse = new PlainTextOutputSpeech();
+                    ((PlainTextOutputSpeech) innerResponse).Text = $"The result is {result}.";
+                }
             }
 
             var response = new Response
