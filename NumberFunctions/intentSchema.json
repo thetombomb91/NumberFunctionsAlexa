@@ -11,6 +11,17 @@
           "name": "secondnum",
           "type": "AMAZON.NUMBER"
         }
+      ]      
+	  "intent": "SubtractIntent",
+      "slots": [
+        {
+          "name": "firstnum",
+          "type": "AMAZON.NUMBER"
+        },
+        {
+          "name": "secondnum",
+          "type": "AMAZON.NUMBER"
+        }
       ]
     }
   ]

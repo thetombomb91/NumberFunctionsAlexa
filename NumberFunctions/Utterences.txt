@@ -1,3 +1,7 @@
 AddIntent what is {firstnum} plus {secondnum}
 AddIntent add {firstnum} and {secondnum}
 AddIntent tell me the answer to {firstnum} and {secondnum}
+
+SubtractIntent what is {firstnum} minus{secondnum}
+SubtractIntent subtract {firstnum} and {secondnum}
+SubtractIntent tell me the answer to {firstnum} and {secondnum}
