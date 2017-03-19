@@ -44,11 +44,12 @@ namespace NumberFunctions
                     default:
                         result = 42;
                         break;
+
+                    innerResponse = new PlainTextOutputSpeech();
+                    ((PlainTextOutputSpeech)innerResponse).Text = $"The result is {result}.";
                 }
             }
 
-            innerResponse = new PlainTextOutputSpeech();
-            ((PlainTextOutputSpeech)innerResponse).Text = $"The result is {result}.";
 
             var response = new Response
             {
